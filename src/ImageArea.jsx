@@ -18,12 +18,15 @@ const Wrapper = styled.div`
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const IMG = styled.img`
 margin: 0 auto;
-max-width: 100%;
-max-height: 100%;
+max-width: 90%;
+max-height: 90%;
 filter: blur(0px) contrast(100%) grayscale(0%) hue-rotate(0deg) brightness(1) drop-shadow(16px 16px 20px blue) invert(0%) opacity(100%) saturate(0%) sepia(0%);
 `
 
