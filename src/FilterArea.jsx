@@ -8,9 +8,9 @@ export default function FilterArea(props) {
       <p>Blur</p>
       <input type="range" className='range blur' max='25' onChange={e => props.setBlur(e.target.value)} />
       <p>Contrast</p>
-      <input type="range" className='range contrast' min='50' max='500' onChange={e => props.setContrast(e.target.value)} />
+      <input type="range" className='range contrast' min='100' max='500' onChange={e => props.setContrast(e.target.value)} />
       <p>Black & White</p>
-      <input type="range" className='range grayscale' />
+      <input type="range" className='range grayscale' min='0' max='100' onChange={e => props.setGray(e.target.value)} />
       <p>Brightness</p>
       <input type="range" className='range brightness' />
       <p>Saturation</p>
