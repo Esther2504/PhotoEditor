@@ -3,16 +3,13 @@ import styled from 'styled-components'
 
 export default function FilterArea(props) {
 
-
-console.log(props.blur)
-
   return (
     <Wrapper>
       <p>Blur</p>
       <input type="range" className='range blur' max='25' onChange={e => props.setBlur(e.target.value)} />
       <span>{props.blur}</span>
       <p>Contrast</p>
-      <input type="range" className='range contrast' />
+      <input type="range" className='range contrast' max='200' onChange={e => props.setContrast(e.target.value)} />
       <p>Black & White</p>
       <input type="range" className='range grayscale' />
       <p>Brightness</p>
