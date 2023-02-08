@@ -7,8 +7,8 @@ import BottomBar from "./BottomBar";
 import upload from "./upload-icon.svg";
 
 function App() {
-  const [blur, setBlur] = useState('0')
-  const [contrast, setContrast] = useState('0')
+  const [blur, setBlur] = useState(0)
+  const [contrast, setContrast] = useState(100)
 
   return (
 <Wrapper>

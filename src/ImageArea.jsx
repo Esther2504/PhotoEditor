@@ -27,6 +27,7 @@ ${props => console.log(props.contrast)}
 margin: 0 auto;
 max-width: 90%;
 max-height: 90%;
-filter: blur(${props => props.blur}px) contrast(${props => props.contrast}%) grayscale(0%) hue-rotate(0deg) brightness(1) drop-shadow(16px 16px 20px blue) invert(0%) opacity(100%) saturate(0%) sepia(0%);
+filter: blur(${props => props.blur}px) contrast(${props => props.contrast}%);
 `
 
+// grayscale(0%) hue-rotate(0deg) brightness(1) drop-shadow(16px 16px 20px blue) invert(0%) opacity(100%) saturate(0%) sepia(0%)
