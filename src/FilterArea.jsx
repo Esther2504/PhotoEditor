@@ -12,7 +12,7 @@ export default function FilterArea(props) {
       <p>Black & White</p>
       <input type="range" className='range grayscale' min='0' max='100' onChange={e => props.setGray(e.target.value)} />
       <p>Brightness</p>
-      <input type="range" className='range brightness' />
+      <input type="range" className='range brightness' min='0' max='200' onChange={e => props.setBrightness(e.target.value)} />
       <p>Saturation</p>
       <input type="range" className='range saturation' />
       <p>Sepia</p>
