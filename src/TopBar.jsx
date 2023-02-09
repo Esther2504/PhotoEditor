@@ -48,6 +48,5 @@ width: 40px;
 `
 const UploadArea = styled.div`
 width: 40px;
-// border: 1px solid black;
 cursor: pointer;
 `
