@@ -11,13 +11,15 @@ function App() {
   const [contrast, setContrast] = useState(100)
   const [gray, setGray] = useState(0)
   const [brightness, setBrightness] = useState(1)
+  const [saturation, setSaturation] = useState(1)
+
 
   return (
 <Wrapper>
 <TopBar />
 <Container>
-<FilterArea blur={blur} setBlur={setBlur} setContrast={setContrast} setGray={setGray} setBrightness={setBrightness} />
-<ImageArea blur={blur} setBlur={setBlur} contrast={contrast} gray={gray} brightness={brightness} />
+<FilterArea blur={blur} setBlur={setBlur} setContrast={setContrast} setGray={setGray} setBrightness={setBrightness} setSaturation={setSaturation} />
+<ImageArea blur={blur} setBlur={setBlur} contrast={contrast} gray={gray} brightness={brightness} saturation={saturation} />
 </Container>
 <BottomBar />
 </Wrapper>
