@@ -10,7 +10,7 @@ function App() {
   const [blur, setBlur] = useState(0)
   const [contrast, setContrast] = useState(100)
   const [gray, setGray] = useState(0)
-  const [brightness, setBrightness] = useState(0)
+  const [brightness, setBrightness] = useState(1)
 
   return (
 <Wrapper>
