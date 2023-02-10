@@ -11,7 +11,7 @@ function App() {
   const [contrast, setContrast] = useState(100)
   const [gray, setGray] = useState(0)
   const [brightness, setBrightness] = useState(1)
-  const [saturation, setSaturation] = useState(1)
+  const [saturation, setSaturation] = useState(100)
 
 
   return (
