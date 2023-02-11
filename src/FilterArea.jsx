@@ -17,6 +17,8 @@ export default function FilterArea(props) {
       <input type="range" className='range saturation' min='100' max='300' onChange={e => props.setSaturation(e.target.value)} />
       <p>Sepia</p>
       <input type="range" className='range sepia' min='0' max='100' onChange={e => props.setSepia(e.target.value)} />
+      <p>Hue</p>
+      <input type="range" className='range hue' min='0' max='180' onChange={e => props.setHue(e.target.value)} />
     </Wrapper>
   )
 }
