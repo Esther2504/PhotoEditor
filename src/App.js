@@ -5,6 +5,7 @@ import ImageArea from "./ImageArea";
 import TopBar from "./TopBar";
 import BottomBar from "./BottomBar";
 import upload from "./upload-icon.svg";
+import GlobalStyle from "./GlobalStyles";
 
 function App() {
   const [blur, setBlur] = useState(0)
@@ -18,6 +19,7 @@ function App() {
 
   return (
 <Wrapper>
+<GlobalStyle />
 <TopBar />
 <Container>
 <FilterArea blur={blur} setBlur={setBlur} setContrast={setContrast} setGray={setGray} setBrightness={setBrightness} setSaturation={setSaturation} setSepia={setSepia} setHue={setHue} />
