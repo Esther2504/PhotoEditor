@@ -31,10 +31,16 @@ function App() {
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
+margin: 0;
+padding: 0;
+background-color: #393943;
+color: white;
 `
 
 const Container = styled.div`
 display: flex;
+margin: 0;
+padding: 0;
 `
 
 export default App;
