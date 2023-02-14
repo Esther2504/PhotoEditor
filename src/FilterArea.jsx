@@ -52,8 +52,10 @@ flex-direction: column;
 background-color: #393943;
 border-radius: 10px;
 box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+justify-content: center;
+align-items: center;
 
 .range {
-  width: 60%;
+  width: 300px;
 }
 `
