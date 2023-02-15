@@ -12,8 +12,8 @@ export default function ImageArea(props) {
 
 const Wrapper = styled.div`
   width: 70%;
-  height: 90vh;
-  // margin: 50px auto;
+  height: 100vh;
+  margin: 50px auto;
   background-color: #393943;
   border-radius: 10px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);

@@ -2,41 +2,47 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 export default function FilterArea(props) {
-
+console.log(props.sepia)
   return (
     <Wrapper>
-      <p>Blur</p>
+     
       <RangeContainer>
+      <p>Blur</p>
       <input type="range" className='range blur' min='0' max='25' defaultValue='0' onChange={e => props.setBlur(e.target.value)} />
       <button onClick={e => props.setBlur(0)}>Reset</button>
       </RangeContainer>
-      <p>Contrast</p>
+     
       <RangeContainer>
+      <p>Contrast</p>
       <input type="range" className='range contrast' min='100' max='500' defaultValue='100' onChange={e => props.setContrast(e.target.value)} />
       <button onClick={e => props.setContrast(100)}>Reset</button>
       </RangeContainer>
-      <p>Black & White</p>
+      
       <RangeContainer>
+      <p>Black & White</p>
       <input type="range" className='range grayscale' min='0' max='100' defaultValue='0' onChange={e => props.setGray(e.target.value)} />
       <button onClick={e => props.setGray(0)}>Reset</button>
       </RangeContainer>
-      <p>Brightness</p>
+      
       <RangeContainer>
+      <p>Brightness</p>
       <input type="range" className='range brightness' min='1' max='10' defaultValue='1' onChange={e => props.setBrightness(e.target.value)} />
       <button onClick={e => props.setBrightness(1)}>Reset</button>
       </RangeContainer>
-      <p>Saturation</p>
+      
       <RangeContainer>
+      <p>Saturation</p>
       <input type="range" className='range saturation' min='100' max='300' defaultValue='100' onChange={e => props.setSaturation(e.target.value)} />
       <button onClick={e => props.setSaturation(100)}>Reset</button>
       </RangeContainer>
-      <p>Sepia</p>
+      
       <RangeContainer>
-      <input type="range" className='range sepia' value={props.sepia} min='0' max='100' defaultValue='0' onChange={e => props.setSepia(e.target.value)} />
+      <p>Sepia</p>
+      <input type="range" className='range sepia' min='0' max='100' defaultValue='0' onChange={e => props.setSepia(e.target.value)} />
       <button onClick={e => props.setSepia(0)}>Reset</button>
       </RangeContainer>
-      <p>Hue</p>
       <RangeContainer>
+      <p>Hue</p>
       <input type="range" className='range hue' min='0' max='300' defaultValue='0' onChange={e => props.setHue(e.target.value)} />
       <button onClick={e => props.setHue(0)}>Reset</button>
       </RangeContainer>
@@ -96,7 +102,12 @@ color: white;
 `
 
 const RangeContainer = styled.div`
-width: 100%;
-display: flex;
-justify-content: space-evenly;
+width: 90%;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+align-items: center;
+justify-items: center;
+text-align: center;
+grid-gap: 10px;
 `
