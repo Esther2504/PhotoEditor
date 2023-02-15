@@ -32,7 +32,7 @@ export default function FilterArea(props) {
       </RangeContainer>
       <p>Sepia</p>
       <RangeContainer>
-      <input type="range" className='range sepia' min='0' max='100' onChange={e => props.setSepia(e.target.value)} />
+      <input type="range" className='range sepia' value={props.sepia} min='0' max='100' onChange={e => props.setSepia(e.target.value)} />
       <button onClick={e => props.setSepia(0)}>Reset</button>
       </RangeContainer>
       <p>Hue</p>
@@ -65,6 +65,32 @@ border-radius: 5px;
 width: 50px;
 height: 30px;
 cursor: pointer;
+}
+
+.range {
+  -webkit-appearance: none;
+  height: 10px;
+  background: white;
+  outline: none;
+  border-radius: 15px;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  background: #927E95;
+  cursor: pointer;
+}
+
+.range::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  background: #927E95;
+  cursor: pointer;
 }
 `
 
