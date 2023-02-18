@@ -6,7 +6,7 @@ const image = props.image
 
   return (
     <Wrapper>
-<IMG src={image} blur={props.blur} contrast={props.contrast} gray={props.gray} brightness={props.brightness} saturation={props.saturation} sepia={props.sepia} hue={props.hue} />
+<IMG src={image} blur={props.blur} contrast={props.contrast} gray={props.gray} brightness={props.brightness} saturation={props.saturation} sepia={props.sepia} hue={props.hue} flipHorizontal={props.flipHorizontal} flipVertical={props.flipVertical} />
     </Wrapper>
   );
 }
@@ -30,6 +30,7 @@ margin: 0 auto;
 max-width: 90%;
 max-height: 90%;
 filter: blur(${props => props.blur}px) contrast(${props => props.contrast}%) grayscale(${props => props.gray}%) brightness(${props => props.brightness}) saturate(${props => props.saturation}%) sepia(${props => props.sepia}%) hue-rotate(${props => props.hue}deg);
+transform: scaleX(${props => props.flipHorizontal}) scaleY(${props => props.flipVertical});
 `
 
 // grayscale(0%) hue-rotate(0deg) brightness(1) drop-shadow(16px 16px 20px blue) invert(0%) opacity(100%) saturate(0%) sepia(0%)

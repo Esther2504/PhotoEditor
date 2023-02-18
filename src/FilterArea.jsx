@@ -45,6 +45,8 @@ console.log(props.sepia)
       <input type="range" className='range hue' min='0' max='300' defaultValue='0' onChange={e => props.setHue(e.target.value)} />
       <button onClick={e => props.setHue(0)}>Reset</button>
       </RangeContainer>
+      <button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}>flip horizontally</button>
+      <button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}>flip vertically</button>
     </Wrapper>
   )
 }
