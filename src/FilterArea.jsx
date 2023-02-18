@@ -47,6 +47,11 @@ console.log(props.sepia)
       </RangeContainer>
       <button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}>flip horizontally</button>
       <button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}>flip vertically</button>
+      <RangeContainer>
+      <p>Border</p>
+      <input type="range" className='range radius' min='0' max='60' defaultValue='0' onChange={e => props.setRadius(e.target.value)} />
+      <button onClick={e => props.setRadius(0)}>Reset</button>
+      </RangeContainer>
     </Wrapper>
   )
 }
