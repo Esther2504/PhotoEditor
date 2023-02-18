@@ -2,13 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 export default function ImageArea(props) {
+const image = props.image
 
   return (
     <Wrapper>
-<IMG src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-732x549.jpg" blur={props.blur} contrast={props.contrast} gray={props.gray} brightness={props.brightness} saturation={props.saturation} sepia={props.sepia} hue={props.hue} />
+<IMG src={image} blur={props.blur} contrast={props.contrast} gray={props.gray} brightness={props.brightness} saturation={props.saturation} sepia={props.sepia} hue={props.hue} />
     </Wrapper>
   );
 }
+
+// https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-732x549.jpg
 
 const Wrapper = styled.div`
   width: 70%;

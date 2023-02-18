@@ -3,8 +3,8 @@ import { useState } from "react";
 import upload from "./upload-icon.svg";
 import styled from "styled-components";
 
-export default function TopBar() {
-    const [image, setImage] = useState();
+export default function TopBar(props) {
+    
 
     // console.log(image[0].name)
 
@@ -14,16 +14,13 @@ export default function TopBar() {
     <Input
     type="file"
     accept="image/png, image/jpeg, image/svg"
-    onChange={e => setImage(URL.createObjectURL(e.target.files[0].name))}
+    onChange={(event) => {
+      console.log(event.target.files[0]);
+      props.setImage(URL.createObjectURL(event.target.files[0]));
+    }}
   />
   <Upload src={upload} />
   </UploadArea>
-{image ?
-  <img src={image[0].name}></img> :
-  null
-}
-
-
   </Wrapper>
   )
 }

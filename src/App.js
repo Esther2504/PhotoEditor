@@ -15,15 +15,15 @@ function App() {
   const [saturation, setSaturation] = useState(100)
   const [sepia, setSepia] = useState(0)
   const [hue, setHue] = useState(0)
-
+  const [image, setImage] = useState(null);
 
   return (
 <Wrapper>
 <GlobalStyle />
-<TopBar />
+<TopBar setImage={setImage} />
 <Container>
 <FilterArea blur={blur} setBlur={setBlur} setContrast={setContrast} setGray={setGray} setBrightness={setBrightness} setSaturation={setSaturation} setSepia={setSepia} sepia={sepia} setHue={setHue} />
-<ImageArea blur={blur} setBlur={setBlur} contrast={contrast} gray={gray} brightness={brightness} saturation={saturation} sepia={sepia} hue={hue} />
+<ImageArea image={image} blur={blur} setBlur={setBlur} contrast={contrast} gray={gray} brightness={brightness} saturation={saturation} sepia={sepia} hue={hue} />
 </Container>
 <BottomBar />
 </Wrapper>
