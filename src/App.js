@@ -23,9 +23,10 @@ function App() {
 <TopBar setImage={setImage} />
 <Container>
 <FilterArea blur={blur} setBlur={setBlur} setContrast={setContrast} setGray={setGray} setBrightness={setBrightness} setSaturation={setSaturation} setSepia={setSepia} sepia={sepia} setHue={setHue} />
+<FlipImages></FlipImages>
 <ImageArea image={image} blur={blur} setBlur={setBlur} contrast={contrast} gray={gray} brightness={brightness} saturation={saturation} sepia={sepia} hue={hue} />
 </Container>
-<BottomBar />
+<BottomBar image={image} />
 </Wrapper>
   );
 }

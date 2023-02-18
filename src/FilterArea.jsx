@@ -5,7 +5,6 @@ export default function FilterArea(props) {
 console.log(props.sepia)
   return (
     <Wrapper>
-     
       <RangeContainer>
       <p>Blur</p>
       <input type="range" className='range blur' min='0' max='25' defaultValue='0' onChange={e => props.setBlur(e.target.value)} />

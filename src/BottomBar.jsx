@@ -2,10 +2,16 @@ import React from 'react'
 import { useState } from "react";
 import upload from "./upload-icon.svg";
 import styled from "styled-components";
+import { saveAs } from 'file-saver';
 
-export default function TopBar() {
+export default function BottomBar({image}) {
+  const downloadImage = () => {
+    // saveAs(image, 'image.png')
+  }
+
   return (
     <Wrapper>
+      <button onClick={downloadImage()}>Download</button>
   </Wrapper>
   )
 }
