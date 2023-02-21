@@ -45,13 +45,15 @@ console.log(props.sepia)
       <input type="range" className='range hue' min='0' max='300' defaultValue='0' onChange={e => props.setHue(e.target.value)} />
       <button onClick={e => props.setHue(0)}>Reset</button>
       </RangeContainer>
-      <button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}>flip horizontally</button>
-      <button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}>flip vertically</button>
       <RangeContainer>
-      <p>Border</p>
+      <p>Rounding Border</p>
       <input type="range" className='range radius' min='0' max='60' defaultValue='0' onChange={e => props.setRadius(e.target.value)} />
       <button onClick={e => props.setRadius(0)}>Reset</button>
       </RangeContainer>
+      <ButtonContainer>
+      <Button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}>flip horizontally</Button>
+      <Button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}>flip vertically</Button>
+      </ButtonContainer>
     </Wrapper>
   )
 }
@@ -70,15 +72,7 @@ border-right: 1px solid white;
   width: 250px;
 }
 
-button {
-background-color:#927E95;
-border-radius: 5px;
-width: 50px;
-height: 30px;
-cursor: pointer;
-border: none;
-color: white;
-}
+
 
 .range {
   -webkit-appearance: none;
@@ -116,4 +110,21 @@ align-items: center;
 justify-items: center;
 text-align: center;
 grid-gap: 10px;
+`
+
+const Button = styled.button`
+width: 150px;
+height: 50px;
+background-color:#927E95;
+border-radius: 5px;
+cursor: pointer;
+border: none;
+color: white;
+font-size: 1rem;
+`
+
+const ButtonContainer = styled.div`
+width: 70%;
+display: flex;
+justify-content: space-between;
 `
