@@ -110,6 +110,17 @@ align-items: center;
 justify-items: center;
 text-align: center;
 grid-gap: 10px;
+
+button {
+  width: 70px;
+  height: 30px;
+  background-color:#927E95;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
 `
 
 const Button = styled.button`
