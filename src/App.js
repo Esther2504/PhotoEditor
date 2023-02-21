@@ -20,6 +20,9 @@ function App() {
   const [flipHorizontal, setFlipHorizontal] = useState(1);
   const [flipVertical, setFlipVertical] = useState(1);
   const [radius, setRadius] = useState(0)
+  const [rotate, setRotate] = useState(0)
+
+console.log(rotate)
 
   return (
     <Wrapper>
@@ -39,6 +42,8 @@ function App() {
           flipHorizontal={flipHorizontal}
           flipVertical={flipVertical}
           setRadius={setRadius}
+          setRotate={setRotate}
+          rotate={rotate}
         />
         {/* <FlipImages setFlipHorizontal={setFlipHorizontal}></FlipImages> */}
         <ImageArea
@@ -54,6 +59,7 @@ function App() {
           flipHorizontal={flipHorizontal}
           flipVertical={flipVertical}
           radius={radius}
+          rotate={rotate}
         />
       </Container>
       <BottomBar image={image} />

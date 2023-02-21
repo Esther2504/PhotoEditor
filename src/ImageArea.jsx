@@ -6,7 +6,7 @@ const image = props.image
 
   return (
     <Wrapper>
-<IMG src={image} blur={props.blur} contrast={props.contrast} gray={props.gray} brightness={props.brightness} saturation={props.saturation} sepia={props.sepia} hue={props.hue} flipHorizontal={props.flipHorizontal} flipVertical={props.flipVertical} radius={props.radius} />
+<IMG src={image} blur={props.blur} contrast={props.contrast} gray={props.gray} brightness={props.brightness} saturation={props.saturation} sepia={props.sepia} hue={props.hue} flipHorizontal={props.flipHorizontal} flipVertical={props.flipVertical} radius={props.radius} rotate={props.rotate} />
     </Wrapper>
   );
 }
@@ -27,10 +27,10 @@ const Wrapper = styled.div`
 
 const IMG = styled.img`
 margin: 0 auto;
-max-width: 90%;
-max-height: 90%;
+max-width: 70%;
+// max-height: 90%;
 filter: blur(${props => props.blur}px) contrast(${props => props.contrast}%) grayscale(${props => props.gray}%) brightness(${props => props.brightness}) saturate(${props => props.saturation}%) sepia(${props => props.sepia}%) hue-rotate(${props => props.hue}deg);
-transform: scaleX(${props => props.flipHorizontal}) scaleY(${props => props.flipVertical});
+transform: scaleX(${props => props.flipHorizontal}) scaleY(${props => props.flipVertical}) rotate(${props => props.rotate}deg);
 border-radius: ${props => props.radius}%;
 `
 

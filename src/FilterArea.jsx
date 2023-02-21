@@ -54,6 +54,10 @@ console.log(props.sepia)
       <Button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}>flip horizontally</Button>
       <Button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}>flip vertically</Button>
       </ButtonContainer>
+      <ButtonContainer>
+      <Button onClick={e => props.setRotate(props.rotate - 90)}>Rotate left</Button>
+      <Button onClick={e => props.setRotate(props.rotate + 90)}>Rotate right</Button>
+      </ButtonContainer>
     </Wrapper>
   )
 }
