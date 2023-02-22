@@ -30,6 +30,7 @@ console.log(rotate)
       <TopBar setImage={setImage} />
       <Container>
         <FilterArea
+        blur={blur}
           setBlur={setBlur}
           setContrast={setContrast}
           setGray={setGray}

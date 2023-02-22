@@ -6,12 +6,15 @@ import fliphorizontal from './flip-horizontal.svg'
 import flipvertical from './flip-vertical.svg'
 
 export default function FilterArea(props) {
-console.log(props.sepia)
+  let defaultValue = props.blur
+console.log(defaultValue)
+// onclick change defaultvalue?
+
   return (
     <Wrapper>
       <RangeContainer>
       <p>Blur</p>
-      <input type="range" className='range blur' min='0' max='25' defaultValue='0' onChange={e => props.setBlur(e.target.value)} />
+      <input type="range" className='range blur' min='0' max='25' defaultValue={defaultValue} onChange={e => props.setBlur(e.target.value)} />
       <button onClick={e => props.setBlur(0)}>Reset</button>
       </RangeContainer>
      
@@ -55,10 +58,10 @@ console.log(props.sepia)
       <button onClick={e => props.setRadius(0)}>Reset</button>
       </RangeContainer>
       <ButtonContainer>
-      <Button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}><img src={fliphorizontal} /></Button>
-      <Button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}><img src={flipvertical} /></Button>
-      </ButtonContainer>
-      <ButtonContainer>
+      <Button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}><img src={flipvertical} /></Button>
+      <Button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}><img src={fliphorizontal} /></Button>
+      {/* </ButtonContainer>
+      <ButtonContainer> */}
       <Button onClick={e => props.setRotate(props.rotate - 90)}><img src={rotateleft} /></Button>
       <Button onClick={e => props.setRotate(props.rotate + 90)}><img src={rotateright} /></Button>
       </ButtonContainer>
@@ -147,7 +150,7 @@ img {
 `
 
 const ButtonContainer = styled.div`
-width: 150px;
+width: 350px;
 height: 60px;
 display: flex;
 justify-content: space-between;
