@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import rotateleft from './rotate-left.svg'
+import rotateright from './rotate-right.svg'
+import fliphorizontal from './flip-horizontal.svg'
+import flipvertical from './flip-vertical.svg'
 
 export default function FilterArea(props) {
 console.log(props.sepia)
@@ -51,12 +55,12 @@ console.log(props.sepia)
       <button onClick={e => props.setRadius(0)}>Reset</button>
       </RangeContainer>
       <ButtonContainer>
-      <Button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}>flip horizontally</Button>
-      <Button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}>flip vertically</Button>
+      <Button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}><img src={fliphorizontal} /></Button>
+      <Button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}><img src={flipvertical} /></Button>
       </ButtonContainer>
       <ButtonContainer>
-      <Button onClick={e => props.setRotate(props.rotate - 90)}>Rotate left</Button>
-      <Button onClick={e => props.setRotate(props.rotate + 90)}>Rotate right</Button>
+      <Button onClick={e => props.setRotate(props.rotate - 90)}><img src={rotateleft} /></Button>
+      <Button onClick={e => props.setRotate(props.rotate + 90)}><img src={rotateright} /></Button>
       </ButtonContainer>
     </Wrapper>
   )
@@ -128,7 +132,7 @@ button {
 `
 
 const Button = styled.button`
-width: 150px;
+width: 70px;
 height: 50px;
 background-color:#927E95;
 border-radius: 5px;
@@ -136,10 +140,15 @@ cursor: pointer;
 border: none;
 color: white;
 font-size: 1rem;
+
+img {
+  width: 20px;
+}
 `
 
 const ButtonContainer = styled.div`
-width: 70%;
+width: 150px;
+height: 60px;
 display: flex;
 justify-content: space-between;
 `
