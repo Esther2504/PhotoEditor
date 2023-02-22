@@ -4,9 +4,7 @@ import upload from "./upload-icon.svg";
 import styled from "styled-components";
 
 export default function TopBar(props) {
-    
-
-    // console.log(image[0].name)
+  
 
   return (
     <Wrapper>
@@ -15,7 +13,6 @@ export default function TopBar(props) {
     type="file"
     accept="image/png, image/jpeg, image/svg"
     onChange={(event) => {
-      console.log(event.target.files[0]);
       props.setImage(URL.createObjectURL(event.target.files[0]));
     }}
   />

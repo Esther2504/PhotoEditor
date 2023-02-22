@@ -48,6 +48,7 @@ console.log(rotate)
         {/* <FlipImages setFlipHorizontal={setFlipHorizontal}></FlipImages> */}
         <ImageArea
           image={image}
+          setImage={setImage}
           blur={blur}
           setBlur={setBlur}
           contrast={contrast}
@@ -62,7 +63,7 @@ console.log(rotate)
           rotate={rotate}
         />
       </Container>
-      <BottomBar image={image} />
+      {/* <BottomBar image={image} /> */}
     </Wrapper>
   );
 }

@@ -1,17 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import upload from "./upload-icon.svg";
 
 export default function ImageArea(props) {
 const image = props.image
 
   return (
     <Wrapper>
+      {image ?
+    
 <IMG src={image} blur={props.blur} contrast={props.contrast} gray={props.gray} brightness={props.brightness} saturation={props.saturation} sepia={props.sepia} hue={props.hue} flipHorizontal={props.flipHorizontal} flipVertical={props.flipVertical} radius={props.radius} rotate={props.rotate} />
-    </Wrapper>
+   
+      :  
+<UploadArea>
+      <Input
+      type="file"
+      accept="image/png, image/jpeg, image/svg"
+      onChange={(event) => {
+        props.setImage(URL.createObjectURL(event.target.files[0]));
+      }}
+    />
+    <Upload src={upload} />
+    <p>Upload image</p>
+    </UploadArea>
+    }
+   </Wrapper>
   );
 }
-
-// https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-732x549.jpg
 
 const Wrapper = styled.div`
   width: 70%;
@@ -33,5 +48,19 @@ filter: blur(${props => props.blur}px) contrast(${props => props.contrast}%) gra
 transform: scaleX(${props => props.flipHorizontal}) scaleY(${props => props.flipVertical}) rotate(${props => props.rotate}deg);
 border-radius: ${props => props.radius}%;
 `
+const Input = styled.input`
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+`
 
+const Upload = styled.img`
+width: 40px;
+`
+const UploadArea = styled.div`
+width: 40px;
+cursor: pointer;
+`
 // grayscale(0%) hue-rotate(0deg) brightness(1) drop-shadow(16px 16px 20px blue) invert(0%) opacity(100%) saturate(0%) sepia(0%)
