@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 import upload from "./upload-icon.svg";
+import cross from "./cross.svg"
 import styled from "styled-components";
 
 export default function TopBar(props) {
@@ -8,6 +9,7 @@ export default function TopBar(props) {
 
   return (
     <Wrapper>
+          <Remove src={cross} onClick={(e) => props.setImage(null)} />
     <UploadArea>
     <Input
     type="file"
@@ -30,6 +32,7 @@ margin: 0 auto;
 background-color: #393943;
 border-bottom: 1px solid white;
 padding: 5px;
+display: flex;
 `
 
 const Input = styled.input`
@@ -44,6 +47,10 @@ const Upload = styled.img`
 width: 40px;
 `
 const UploadArea = styled.div`
+width: 40px;
+cursor: pointer;
+`
+const Remove = styled.img`
 width: 40px;
 cursor: pointer;
 `
