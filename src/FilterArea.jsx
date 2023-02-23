@@ -6,15 +6,12 @@ import fliphorizontal from './flip-horizontal.svg'
 import flipvertical from './flip-vertical.svg'
 
 export default function FilterArea(props) {
-  let defaultValue = props.blur
-console.log(defaultValue)
-// onclick change defaultvalue?
 
   return (
     <Wrapper>
       <RangeContainer>
       <p>Blur</p>
-      <input type="range" className='range blur' min='0' max='25' defaultValue={defaultValue} onChange={e => props.setBlur(e.target.value)} />
+      <input type="range" className='range blur' min='0' max='25' defaultValue='0' onChange={e => props.setBlur(e.target.value)} />
       <button onClick={e => props.setBlur(0)}>Reset</button>
       </RangeContainer>
      
@@ -70,8 +67,8 @@ console.log(defaultValue)
 }
 
 const Wrapper = styled.div`
-width: 30%;
-height: 100vh;
+width: 600px;
+height: 900px;
 display: flex;
 flex-direction: column;
 background-color: #393943;

@@ -29,8 +29,10 @@ const image = props.image
 }
 
 const Wrapper = styled.div`
-  width: 70%;
-  height: 100vh;
+  // width: 1200px;
+  height: 800px;
+  max-width: 1500px;
+  max-height: 800px;
   margin: 50px auto;
   background-color: #393943;
   border-radius: 10px;
@@ -38,11 +40,12 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 `;
 
 const IMG = styled.img`
 margin: 0 auto;
-max-width: 70%;
+max-width: 100%;
 // max-height: 90%;
 filter: blur(${props => props.blur}px) contrast(${props => props.contrast}%) grayscale(${props => props.gray}%) brightness(${props => props.brightness}) saturate(${props => props.saturation}%) sepia(${props => props.sepia}%) hue-rotate(${props => props.hue}deg);
 transform: scaleX(${props => props.flipHorizontal}) scaleY(${props => props.flipVertical}) rotate(${props => props.rotate}deg);
@@ -50,17 +53,18 @@ border-radius: ${props => props.radius}%;
 `
 const Input = styled.input`
   opacity: 0;
-  width: 40px;
+  width: 60px;
   height: 40px;
   position: absolute;
   cursor: pointer;
 `
 
 const Upload = styled.img`
-width: 40px;
+width: 60px;
 `
 const UploadArea = styled.div`
-width: 40px;
+width: 100px;
+text-align: center;
 cursor: pointer;
 `
 // grayscale(0%) hue-rotate(0deg) brightness(1) drop-shadow(16px 16px 20px blue) invert(0%) opacity(100%) saturate(0%) sepia(0%)
