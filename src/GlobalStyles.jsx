@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
- 
+import { createGlobalStyle } from "styled-components";
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -8,5 +8,5 @@ const GlobalStyle = createGlobalStyle`
     background-color: #393943;
   }
 `;
- 
+
 export default GlobalStyle;
