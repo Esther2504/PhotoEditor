@@ -19,16 +19,16 @@ function App() {
   const [image, setImage] = useState(null);
   const [flipHorizontal, setFlipHorizontal] = useState(1);
   const [flipVertical, setFlipVertical] = useState(1);
-  const [radius, setRadius] = useState(0)
-  const [rotate, setRotate] = useState(0)
+  const [radius, setRadius] = useState(0);
+  const [rotate, setRotate] = useState(0);
 
   return (
     <Wrapper>
       <GlobalStyle />
-      <TopBar setImage={setImage} />
       <Container>
+      <TopBar setImage={setImage} />
         <FilterArea
-        blur={blur}
+          blur={blur}
           setBlur={setBlur}
           setContrast={setContrast}
           setGray={setGray}
@@ -44,7 +44,7 @@ function App() {
           setRotate={setRotate}
           rotate={rotate}
         />
-        {/* <FlipImages setFlipHorizontal={setFlipHorizontal}></FlipImages> */}
+              </Container>
         <ImageArea
           image={image}
           setImage={setImage}
@@ -61,15 +61,13 @@ function App() {
           radius={radius}
           rotate={rotate}
         />
-      </Container>
-      {/* <BottomBar image={image} /> */}
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
+height: 100vh;
   display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
   background-color: #393943;
@@ -77,9 +75,13 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
+height: 100vh;
   display: flex;
+  flex-direction: column;
+  border-right: 1px solid white;
   margin: 0;
   padding: 0;
 `;
+
 
 export default App;

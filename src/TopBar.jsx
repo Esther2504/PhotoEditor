@@ -25,14 +25,15 @@ export default function TopBar(props) {
 }
 
 const Wrapper = styled.div`
-width: 100%;
+width: 600px;
 height: 5vh;
 box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-margin: 0 auto;
+// margin: 0 auto;
 background-color: #393943;
 border-bottom: 1px solid white;
 padding: 5px;
 display: flex;
+// justify-content: flex-end;
 `
 
 const Input = styled.input`

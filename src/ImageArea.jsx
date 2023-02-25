@@ -8,9 +8,7 @@ const image = props.image
   return (
     <Wrapper>
       {image ?
-    
 <IMG src={image} blur={props.blur} contrast={props.contrast} gray={props.gray} brightness={props.brightness} saturation={props.saturation} sepia={props.sepia} hue={props.hue} flipHorizontal={props.flipHorizontal} flipVertical={props.flipVertical} radius={props.radius} rotate={props.rotate} />
-   
       :  
 <UploadArea>
       <Input
@@ -29,14 +27,10 @@ const image = props.image
 }
 
 const Wrapper = styled.div`
-  // width: 1200px;
-  height: 800px;
-  max-width: 1500px;
-  max-height: 800px;
-  margin: 50px auto;
+  margin: 0 auto;
+  height: 100vh;
   background-color: #393943;
-  border-radius: 10px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,8 +39,7 @@ const Wrapper = styled.div`
 
 const IMG = styled.img`
 margin: 0 auto;
-max-width: 100%;
-// max-height: 90%;
+max-width: 90%;
 filter: blur(${props => props.blur}px) contrast(${props => props.contrast}%) grayscale(${props => props.gray}%) brightness(${props => props.brightness}) saturate(${props => props.saturation}%) sepia(${props => props.sepia}%) hue-rotate(${props => props.hue}deg);
 transform: scaleX(${props => props.flipHorizontal}) scaleY(${props => props.flipVertical}) rotate(${props => props.rotate}deg);
 border-radius: ${props => props.radius}%;
@@ -63,7 +56,6 @@ const Upload = styled.img`
 width: 60px;
 `
 const UploadArea = styled.div`
-width: 100px;
 text-align: center;
 cursor: pointer;
 `

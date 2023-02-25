@@ -57,12 +57,9 @@ export default function FilterArea(props) {
       <ButtonContainer>
       <Button onClick={e => props.setFlipHorizontal((props.flipHorizontal == 1) ? -1 : 1)}><img src={flipvertical} /></Button>
       <Button onClick={e => props.setFlipVertical((props.flipVertical == 1) ? -1 : 1)}><img src={fliphorizontal} /></Button>
-      {/* </ButtonContainer>
-      <ButtonContainer> */}
       <Button onClick={e => props.setRotate(props.rotate - 90)}><img src={rotateleft} /></Button>
       <Button onClick={e => props.setRotate(props.rotate + 90)}><img src={rotateright} /></Button>
       </ButtonContainer>
-      <Button>Background remover</Button>
     </Wrapper>
   )
 }
@@ -75,7 +72,6 @@ flex-direction: column;
 background-color: #393943;
 box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 align-items: center;
-border-right: 1px solid white;
 
 .range {
   width: 250px;
