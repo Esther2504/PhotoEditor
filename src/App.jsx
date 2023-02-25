@@ -3,10 +3,7 @@ import styled from "styled-components";
 import FilterArea from "./FilterArea";
 import ImageArea from "./ImageArea";
 import TopBar from "./TopBar";
-import BottomBar from "./BottomBar";
-import upload from "./upload-icon.svg";
 import GlobalStyle from "./GlobalStyles";
-import FlipImages from "./FlipImages";
 
 function App() {
   const [blur, setBlur] = useState(0);

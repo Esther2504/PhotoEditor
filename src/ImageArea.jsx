@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import upload from "./upload-icon.svg";
+import upload from "./images/upload-icon.svg";
 
 export default function ImageArea(props) {
 const image = props.image

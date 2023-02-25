@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
-import upload from "./upload-icon.svg";
-import cross from "./cross.svg"
+import upload from "./images/upload-icon.svg";
+import cross from "./images/cross.svg"
 import styled from "styled-components";
 
 export default function TopBar(props) {
