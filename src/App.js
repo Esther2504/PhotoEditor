@@ -22,24 +22,6 @@ function App() {
   const [radius, setRadius] = useState(0)
   const [rotate, setRotate] = useState(0)
 
-  const encodedParams = new URLSearchParams();
-  encodedParams.append("image_url", "https://objectcut.com/assets/img/raven.jpg");
-  
-  const options = {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/x-www-form-urlencoded',
-      'X-RapidAPI-Key': 'process.env.REACT_APP_API_KEY',
-      'X-RapidAPI-Host': 'background-removal.p.rapidapi.com'
-    },
-    body: encodedParams
-  };
-  
-  fetch('https://background-removal.p.rapidapi.com/remove', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-
   return (
     <Wrapper>
       <GlobalStyle />
