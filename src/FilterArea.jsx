@@ -62,6 +62,7 @@ export default function FilterArea(props) {
       <Button onClick={e => props.setRotate(props.rotate - 90)}><img src={rotateleft} /></Button>
       <Button onClick={e => props.setRotate(props.rotate + 90)}><img src={rotateright} /></Button>
       </ButtonContainer>
+      <Button>Background remover</Button>
     </Wrapper>
   )
 }
