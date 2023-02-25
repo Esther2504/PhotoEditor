@@ -30,7 +30,6 @@ const Wrapper = styled.div`
   margin: 0 auto;
   height: 100vh;
   background-color: #393943;
-  // box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +38,7 @@ const Wrapper = styled.div`
 
 const IMG = styled.img`
 margin: 0 auto;
-max-width: 90%;
+max-width: 80%;
 filter: blur(${props => props.blur}px) contrast(${props => props.contrast}%) grayscale(${props => props.gray}%) brightness(${props => props.brightness}) saturate(${props => props.saturation}%) sepia(${props => props.sepia}%) hue-rotate(${props => props.hue}deg);
 transform: scaleX(${props => props.flipHorizontal}) scaleY(${props => props.flipVertical}) rotate(${props => props.rotate}deg);
 border-radius: ${props => props.radius}%;

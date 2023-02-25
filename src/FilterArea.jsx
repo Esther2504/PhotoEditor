@@ -65,19 +65,18 @@ export default function FilterArea(props) {
 }
 
 const Wrapper = styled.div`
+margin: 50px auto;
 width: 600px;
 height: 900px;
 display: flex;
 flex-direction: column;
 background-color: #393943;
-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+// box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 align-items: center;
 
 .range {
   width: 250px;
 }
-
-
 
 .range {
   -webkit-appearance: none;
@@ -145,7 +144,8 @@ img {
 
 const ButtonContainer = styled.div`
 width: 350px;
-height: 60px;
+height: 120px;
 display: flex;
 justify-content: space-between;
+align-items: center;
 `
