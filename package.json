@@ -1,6 +1,6 @@
 {
   "homepage": "https://esther2504.github.io/photo-editor/",
-  "name": "image-editor",
+  "name": "photo-editor",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
